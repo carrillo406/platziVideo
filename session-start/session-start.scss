@@ -1,14 +1,21 @@
+$white2: white;
 body{
     margin: 0;
     /* background-color: #8f57fd; */
     font-family: 'Muli', sans-serif;
 }
-.header{
+.flex{
     align-items: center;
+    display: flex;
+    // font-size: 80px;
+}
+.header{
+    @extend .flex;
+    // align-items: center;
     background-color: #21c08b;
     color:white;
     height: 100px;
-    display: flex;
+    // display: flex;
     justify-content: space-between;
     top: 0px;
     width: 100%;
@@ -84,7 +91,7 @@ body{
     font-size: 14px;
 }
 .login__container--register a{
-    color: white;
+    color: $white2;
     font-weight: bold;
     font-size: 16px;
     text-decoration: none;
@@ -139,4 +146,15 @@ body{
 .footer a:hover{
     text-decoration: underline;
 }
-
+@media only screen and (max-width: 600px){
+    .login__container{
+        background-color: transparent;
+        border: none;
+        padding:0px;
+        width: 100%;
+    }
+    .footer{
+        align-items: flex-start;
+        flex-direction: column;
+    }
+}
